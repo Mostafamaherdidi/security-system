@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Berimbolo Security Systems</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #0F1B2E;
+            color: #FFFFFF;
+        }
+        .card {
+            background-color: #172A45;
+            color: #FFFFFF;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .form-control {
+            background-color: #1F3559;
+            color: #FFFFFF;
+            border: none;
+        }
+        .form-control:focus {
+            background-color: #1F3559;
+            color: #FFFFFF;
+            border: none;
+            box-shadow: none;
+        }
+        .btn {
+            background-color: #0F1B2E;
+            border-color: #0F1B2E;
+            transition: background-color 0.3s ease-in-out;
+        }
+        .btn:hover {
+            background-color: #1F3559;
+            border-color: #1F3559;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark ">
+                <a class="navbar-brand" href="#">
+                    <div style="text-align: center; font-family: Arial, sans-serif; font-size: 24px; font-weight: bold; color: #FFFFFF; text-transform: uppercase; letter-spacing: 2px; position: relative; animation: bounce 1s ease infinite alternate;">
+                        Berimbolo Security Systems
+                    </div>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="products.html">Products</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    
+    <style>
+        @keyframes bounce {
+            from {
+                transform: translateY(0);
+            }
+            to {
+                transform: translateY(-10px);
+            }
+        }
+    </style>
+    
+    <!-- Main Content Section -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <div class="row">
+                <div class="col-md-6 mx-auto">
+                    <div class="card p-4">
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label for="name">Name:</label>
+                                <input type="text" id="name" class="form-control" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" class="form-control" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message:</label>
+                                <textarea id="message" class="form-control" name="message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-dark text-light py-3">
+        <div class="container">
+            <p>&copy; 2024 Berimbolo Security Systems</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Contact Form Submission -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const form = document.getElementById("contactForm");
+
+            form.addEventListener("submit", function(event) {
+                event.preventDefault();
+
+                const name = document.getElementById("name").value;
+                const email = document.getElementById("email").value;
+                const message = document.getElementById("message").value;
+
+                // Validate the form fields
+                if (name.trim() === "" || email.trim() === "" || message.trim() === "") {
+                    alert("Please fill in all fields.");
+                    return;
+                }
+
+                // Simulate sending the form data to a backend (you'd replace this with actual form submission)
+                alert("Form submitted successfully!");
+                form.reset();
+            });
+        });
+    </script>
+</body>
+</html>

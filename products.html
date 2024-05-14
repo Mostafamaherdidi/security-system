@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Berimbolo Security Systems</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #0F1B2E;
+            color: #FFFFFF;
+        }
+        .card {
+            background-color: #172A45;
+            color: #FFFFFF;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .nav-link {
+            color: #FFFFFF;
+        }
+        .nav-link:hover {
+            color: #1F3559;
+        }
+        .footer {
+            background-color: #1F3559;
+            color: #FFFFFF;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <a class="navbar-brand" href="#">
+                    <div style="text-align: center; font-family: Arial, sans-serif; font-size: 24px; font-weight: bold; color: #FFFFFF; text-transform: uppercase; letter-spacing: 2px; position: relative; animation: bounce 1s ease infinite alternate;">
+                        Berimbolo Security Systems
+                    </div>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="products.html">Products</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    
+    <style>
+        @keyframes bounce {
+            from {
+                transform: translateY(0);
+            }
+            to {
+                transform: translateY(-10px);
+            }
+        }
+    </style>
+    
+    <!-- Main Content Section -->
+    <section id="products" class="bg-dark py-5">
+        <div class="container">
+            <h2>Our Products</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="OIP.jpg" class="card-img-top" alt="Alarm System">
+                        <div class="card-body">
+                            <h5 class="card-title">Basic Security Package</h5>
+                            <ul class="list-unstyled">
+                                <li>1 x Alarm System</li>
+                                <li>1 x CCTV Camera</li>
+                                <li>Local CCTV Footage Storage</li>
+                                <li>Not Centrally Monitored</li>
+                                <br>
+                                <h5>Price: 100$</h5>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="phot2.jpg" class="card-img-top" alt="CCTV Cameras">
+                        <div class="card-body">
+                            <h5 class="card-title">Standard Security Package</h5>
+                            <ul class="list-unstyled">
+                                <li>1 x Alarm System</li>
+                                <li>2 x CCTV Cameras</li>
+                                <li>Online and Local CCTV Footage Storage</li>
+                                <li>Not Centrally Monitored</li>
+                                <br>
+                                <h5>Price: 240$</h5>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="POO.jpg" class="card-img-top" alt="Deluxe Security Package">
+                        <div class="card-body">
+                            <h5 class="card-title">Deluxe Security Package</h5>
+                            <ul class="list-unstyled">
+                                <li>1 x Alarm System</li>
+                                <li>4 x CCTV Cameras</li>
+                                <li>Online and Local CCTV Footage Storage</li>
+                                <li>Centrally Monitored</li>
+                                <br>
+                                <h5>Price: 400$</h5>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Custom Security Systems</h5>
+                            <p>Customers must contact the company to arrange an assessment and planning meeting.</p>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <i class="fas fa-bell"></i> Alarm System - $<span id="price_alarm">49</span>
+                                    <div class="item-counter">
+                                        <span class="mr-2">Quantity:</span>
+                                        <button class="btn btn-sm btn-outline-primary" onclick="decrement('alarm')">-</button>
+                                        <span id="quantity_alarm">0</span>
+                                        <button class="btn btn-sm btn-outline-primary" onclick="increment('alarm')">+</button>
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="fas fa-video"></i> CCTV Camera - $<span id="price_camera">89</span> each
+                                    <div class="item-counter">
+                                        <span class="mr-2">Quantity:</span>
+                                        <button class="btn btn-sm btn-outline-primary" onclick="decrement('camera')">-</button>
+                                        <span id="quantity_camera">0</span>
+                                        <button class="btn btn-sm btn-outline-primary" onclick="increment('camera')">+</button>
+                                    </div>
+                                </li>
+                                <li>
+                                    <label><input type="radio" name="storage_option" id="local_storage_radio" value="local"> Local Storage (Terabytes) - 30$</label>
+                                </li>
+                                <li>
+                                    <label><input type="radio" name="storage_option" id="online_storage_radio" value="online"> Online Storage (Terabytes) - 15$</label>
+                                </li>
+                                <li><i class="fas fa-user-lock"></i> Central Monitoring - $<span id="price_monitoring">200</span>/month</li>
+                            </ul>
+                            <div id="local_storage_counter" class="item-counter" style="display: none;">
+                                <span class="mr-2">Local Storage Quantity - :</span>
+                                <button class="btn btn-sm btn-outline-primary" onclick="decrement('local')">-</button>
+                                <span id="quantity_local">0</span>
+                                <button class="btn btn-sm btn-outline-primary" onclick="increment('local')">+</button>
+                            </div>
+                            <div id="online_storage_counter" class="item-counter" style="display: none;">
+                                <span class="mr-2">Online Storage Quantity:</span>
+                                <button class="btn btn-sm btn-outline-primary" onclick="decrement('online')">-</button>
+                                <span id="quantity_online">0</span>
+                                <button class="btn btn-sm btn-outline-primary" onclick="increment('online')">+</button>
+                            </div>
+                            <div class="mt-3">
+                                <h5>Total Price: $<span id="total_price">0</span></h5>
+                            </div>
+                            <button class="btn btn-primary" onclick="calculateTotal()">Calculate Total</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <script>
+                    var prices = {
+                        alarm: 49,
+                        camera: 89,
+                        monitoring: 200,
+                        local_storage: 30,
+                        online_storage: 15
+                    };
+                
+                    var maxAlarms = 400; // Maximum number of alarm systems allowed
+                    var maxCameras = 400; // Maximum number of CCTV cameras allowed
+                    var maxLocalStorage = 20; // Maximum local storage capacity in terabytes
+                    var maxOnlineStorage = 500; // Maximum online storage capacity in terabytes
+                
+                    function increment(itemId) {
+                        var quantity = parseInt(document.getElementById('quantity_' + itemId).innerText);
+                        if (itemId === 'alarm' && quantity >= maxAlarms) {
+                            alert(`You can only have up to ${maxAlarms} alarm system(s).`);
+                            return;
+                        } else if (itemId === 'camera' && quantity >= maxCameras) {
+                            alert(`You can only have up to ${maxCameras} CCTV camera(s).`);
+                            return;
+                        } else if (itemId === 'local' && quantity >= maxLocalStorage) {
+                            alert(`Local storage capacity cannot exceed ${maxLocalStorage} terabytes.`);
+                            return;
+                        } else if (itemId === 'online' && quantity >= maxOnlineStorage) {
+                            alert(`Online storage capacity cannot exceed ${maxOnlineStorage} terabytes.`);
+                            return;
+                        }
+                        document.getElementById('quantity_' + itemId).innerText = quantity + 1;
+                    }
+                
+                    function decrement(itemId) {
+                        var quantity = parseInt(document.getElementById('quantity_' + itemId).innerText);
+                        if (quantity > 0) {
+                            document.getElementById('quantity_' + itemId).innerText = quantity - 1;
+                        }
+                    }
+                
+                    function calculateTotal() {
+                        var total = 0;
+                        var alarmQuantity = parseInt(document.getElementById('quantity_alarm').innerText);
+                        var cameraQuantity = parseInt(document.getElementById('quantity_camera').innerText);
+                
+                        // Require at least one alarm system
+                        if (alarmQuantity === 0) {
+                            alert("At least one alarm system is required.");
+                            return;
+                        }
+                
+                        total += alarmQuantity * prices.alarm;
+                        total += cameraQuantity * prices.camera;
+                
+                        var storageOptionSelected = false;
+                        if (document.getElementById('local_storage_radio').checked) {
+                            var localQuantity = parseInt(document.getElementById('quantity_local').innerText);
+                            if (localQuantity > 0) {
+                                total += localQuantity * prices.local_storage;
+                                storageOptionSelected = true;
+                            }
+                        } else if (document.getElementById('online_storage_radio').checked) {
+                            var onlineQuantity = parseInt(document.getElementById('quantity_online').innerText);
+                            if (onlineQuantity > 0) {
+                                total += onlineQuantity * prices.online_storage;
+                                storageOptionSelected = true;
+                            }
+                        }
+                
+                        // Require at least one storage option (local or online)
+                        if (!storageOptionSelected) {
+                            alert("You must select at least one storage option (local or online).");
+                            return;
+                        }
+                
+                        total += prices.monitoring;
+                        document.getElementById('total_price').innerText = total;
+                    }
+                
+                    document.getElementById('local_storage_radio').addEventListener('change', function() {
+                        var localCounter = document.getElementById('local_storage_counter');
+                        var onlineCounter = document.getElementById('online_storage_counter');
+                        if (this.checked) {
+                            localCounter.style.display = 'block';
+                            onlineCounter.style.display = 'none';
+                        } else {
+                            localCounter.style.display = 'none';
+                        }
+                    });
+                
+                    document.getElementById('online_storage_radio').addEventListener('change', function() {
+                        var localCounter = document.getElementById('local_storage_counter');
+                        var onlineCounter = document.getElementById('online_storage_counter');
+                        if (this.checked) {
+                            onlineCounter.style.display = 'block';
+                            localCounter.style.display = 'none';
+                        } else {
+                            onlineCounter.style.display = 'none';
+                        }
+                    });
+                </script>
+                
+
+        
+        
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer py-3">
+        <div class="container">
+            <p>&copy; 2024 Berimbolo Security Systems</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
